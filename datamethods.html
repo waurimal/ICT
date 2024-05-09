@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.475">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Examining student ICT use and learning outcomes: Evidence from Japanese PISA data - 4&nbsp; Data and methods</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./results.html" rel="next">
+<link href="./literature.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and methods</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Examining student ICT use and learning outcomes: Evidence from Japanese PISA data</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">학생의 ICT 사용과 학습 성과에 대한 조사: 일본 PISA 데이터로부터의 근거</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./literature.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature review</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./datamethods.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and methods</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./results.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./discussion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Discussion</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusion.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Conclusion</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#데이터와-연구-방법" id="toc-데이터와-연구-방법" class="nav-link active" data-scroll-target="#데이터와-연구-방법"><span class="toc-section-number">5</span>  데이터와 연구 방법</a>
+  <ul class="collapse">
+  <li><a href="#데이터와-변수" id="toc-데이터와-변수" class="nav-link" data-scroll-target="#데이터와-변수"><span class="toc-section-number">5.1</span>  데이터와 변수</a></li>
+  <li><a href="#분석" id="toc-분석" class="nav-link" data-scroll-target="#분석"><span class="toc-section-number">5.2</span>  분석</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Data and methods</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="데이터와-연구-방법" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> 데이터와 연구 방법</h1>
+<section id="데이터와-변수" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="데이터와-변수"><span class="header-section-number">5.1</span> 데이터와 변수</h2>
+<ul>
+<li><p>OECD PISA 2018 일본 데이터 사용</p></li>
+<li><p>OECD 및 비 OECD 국가의 15세 학생의 학습 성과(읽기, 수학, 과학)에 영향을 미치는 요인을 측정함</p></li>
+<li><p>이러한 요인에는 학생과 학생의 가족, 학교, 교장, 교사의 특성이 포함됨</p></li>
+<li><p>일본의 경우 조사 대상 학생 수는 약 6,100명임</p></li>
+<li><p>참가국이 실시하는 5가지 선택 설문 중 하나로 컴퓨터 친숙도 설문이 제공됨</p>
+<ul>
+<li>ICT 사용와 ICT 역량을 파악함</li>
+</ul></li>
+<li><p>종속 변수: 읽기, 수학, 과학</p></li>
+</ul>
+<pre><code>-   읽기: 일상생활 및 사회 참여와 관련된 다양한 목적을 위해 텍스트와 상호작용하는 학생들의 능력을 측정함
+
+-   수학: 수학적으로 추론하고 수학적 개념과 절차를 사용하여 현상을 설명하거나 예측하는 학생의 능력을 측정함
+
+-   과학: 과학 및 기술에 대한 담론을 읽는 학생들의 능력을 측정하며, 현상을 과학적으로 설명하기, 탐구 설계 및 평가하기, 데이터와 증거를 과학적으로 해석하기 등이 포함됨</code></pre>
+<ul>
+<li><p>예측 변수: ICT 사용 척도</p>
+<ul>
+<li><p>학생들의 ICT 사용을 포착하기 위해 설계된 문항으로 IRT를 사용하여 구성됨</p></li>
+<li><p>이 척도는 단일 변수로 쉽게 측정할 수 없는 잠재 구인을 포착할 수 있도록 설계됨</p></li>
+<li><p>PISA는 국가 내 각 척도의 내적 일관성을 확인하기 위해 Cronbach’s alpha 계수를 사용함</p>
+<ul>
+<li>내적 일관성의 최소 임계값을 충족하지 못하면 일부 문항을 삭제하고 허용 가능한 값에 도달할 때까지 일관성을 다시 확인</li>
+</ul></li>
+</ul></li>
+<li><p>ICT 친숙도 설문은 학생들이 학교 밖 여가 활동, 학교 밖 학업 활동, 학교 내 활동을 위해 ICT 기기를 얼마나 자주 사용하는지 파악하기 위해 3문항으로 구성되었음</p>
+<ul>
+<li><p>이 관점에서 ICT 사용은 다양한 환경과 특정 목적에 따라 ICT를 사용하는 빈도를 의미함</p></li>
+<li><p>각 문항은 5점 응답 범주(“전혀 또는 거의 사용하지 않음”, “한 달에 한두 번”, “일주일에 한두 번”, “거의 매일”, “매일”)로 구성되어 있음</p></li>
+<li><p>각 문항이 포함된 IRT 사용의 결과 지표 변수는 ENTUSE(여가 활동을 위한 학교 밖 ICT 사용), HOMESCH(학업 활동을 위한 학교 밖 ICT 사용), USESCH(일반적으로 학교에서의 ICT 사용)임</p></li>
+<li><p>각 지표 변수에 대한 문구와 문항 수는 부록 표 A7, A8, A9에 나와 있음</p></li>
+</ul></li>
+<li><p>PISA 2018에는 학생들의 교과 관련 ICT 사용을 측정하기 위해 고안된 두 가지 새로운 문항이 포함됨</p>
+<ul>
+<li><p>이 두 문항은 교실 수업 중과 수업 외 시간에 학생들의 교과 관련 ICT 사용 시간을 측정하는 문항으로 구성되어 있음</p></li>
+<li><p>따라서 이 변수는 학생들이 수업 중 또는 수업 외 시간에 교과 관련 활동을 위해 ICT 기기를 사용하는 시간을 포착함</p></li>
+<li><p>각 관련 문항의 응답 범주는 ‘사용 안함’, ‘일주일에 1~30분’, ‘일주일에 31~60분’, ’일주일에 60분 이상’임</p></li>
+<li><p>관련 문항의 결과 변수는 ICTCLASS(수업 중 교과 관련 ICT 사용) 및 ICTOUTSIDE(교실 수업 외 교과 관련 ICT 사용)임</p></li>
+<li><p>각 척도에 사용된 문구와 문항 수는 부록 표 A10, A11에 나와 있음</p></li>
+</ul></li>
+<li><p>이 연구에서 사용된 또 다른 필수 척도 변수는 학생이 인지하는 ICT 역량임</p>
+<ul>
+<li><p>이 지표 변수는 학생들의 ICT 역량에 따라 ICT 사용과 학습 결과 사이의 연관성에서 잠재적인 변화를 조사하는 데 사용됨</p></li>
+<li><p>이 역량을 포착하는 데 사용된 문항은 4점 리커트 응답 범주(‘매우 동의하지 않음’, ‘동의하지 않음’, ‘동의함’, ‘매우 동의함’)로 구성되었음</p></li>
+<li><p>PISA 평가의 맥락에서 ICT 사용 역량의 구성은 실제 시험이 아닌 학생의 보고를 사용하여 측정된다는 점에 유의해야 함</p></li>
+<li><p>따라서 이 변수에 접근할 때는 ’인지된 역량’이라는 표현이 적절한 해석인 것으로 보임</p></li>
+<li><p>ICT 역량 척도를 만드는 데 사용된 문항은 부록 표 A12에 나와 있음</p></li>
+</ul></li>
+<li><p>위에서 언급한 변수 외에도 보다 강건한 추정치를 얻기 위해 일부 변수를 통제 예측변수로 사용함</p>
+<ul>
+<li><p>연령, 성별, 가정의 사회경제적 지위(SES), 학습에 대한 태도, 학습에 투자한 시간을 통제함</p></li>
+<li><p>가정 SES는 주택 소유, 부모의 학력, 부모의 최고 직업이라는 세 가지 차원을 설명하는 구성 요소임</p>
+<ul>
+<li>이러한 차원은 계산된 지표이며, 가정 SES 변수는 세 가지 지표의 산술 평균에서 파생됨</li>
+</ul></li>
+</ul></li>
+<li><p>또한 학교 수준에서 학생들의 학습 성과에 영향을 미칠 수 있는 요인들을 통제함</p>
+<ul>
+<li><p>학급 규모, 학교 유형(공립 대 사립), 학교 내 ICT 사용 여부, 교육 자료 부족, 교실 내 규율 분위기 등을 통제함</p></li>
+<li><p>연구에 사용된 모든 변수는 표 1에 나와 있음</p></li>
+</ul></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(intsvy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="분석" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="분석"><span class="header-section-number">5.2</span> 분석</h2>
+<ul>
+<li><p>본 연구의 실증 분석은 R 패키지 “intsvy”의 회귀 기법을 사용하여 수행되었음</p>
+<ul>
+<li><p>이 패키지는 프로그램의 복잡한 설계를 고려하면서 PISA 데이터를 분석할 수 있는 함수인 “intsvy.reg.pv”를 제공함</p></li>
+<li><p>다른 많은 대규모 국제 평가와 마찬가지로 PISA의 설계에는 강력한 추정치를 생성하기 위해 고려해야 하는 복잡한 특성이 포함되어 있음</p></li>
+<li><p>실제로 설계의 복잡성은 데이터 분석에 영향을 미치며, 이를 고려하지 않으면 편향된 추정치가 나올 가능성이 높음</p></li>
+<li><p>통계 패키지는 PISA의 필수적인 특성을 설명하는데, 예를 들어, 2단계 표집 절차를 설명하고, 데이터 세트에 제공된 복제 가중치를 사용하며, 프로그램이 평가하는 세 가지 영역(읽기, 수학, 과학)에서 학업성취도의 측정유의값을 사용함</p></li>
+<li><p>Caro, Biecek(2017)은 이 패키지에 대한 기술적 세부 사항을 제공함</p></li>
+</ul></li>
+<li><p>분석에서는 각 형태의 ICT 사용과 조사된 각 학습 영역에 대해 ICT 사용과 학습 결과 사이의 연관성을 추정함</p>
+<ul>
+<li><p>다섯 가지 형태의 ICT 사용과 세 가지 학습 영역을 조사했기 때문에 15개의 회귀를 추정함</p></li>
+<li><p>이러한 추정을 통해 각 형태의 ICT 사용이 각 학습 영역과 어떻게 연관되는지 평가할 수 있음</p></li>
+<li><p>이 추정의 일반적인 모델은 식 (1)에 명시되어 있음</p></li>
+<li><p><span id="eq-1"><span class="math display">\[
+y_{ij}=b_0+b_1age_{ij}+b_2gender_{ij}+b_3SES_{ij}+b_4attlearn_{jk}+b_5learntime_{jk}+b_6ICT+b_7ICTcomp_{ij}+b_8pubschl_{ij}+b_9ICTavail_{ij}+b_{10}educmat_{ij}+b_{11}discclim_{ij}+b_{12}classsize+e_{ij}
+\tag{5.1}\]</span></span></p>
+<ul>
+<li><p>여기서 <span class="math inline">\(y\)</span>는 학업 성취도를 나타냄</p></li>
+<li><p>아랫첨자 <span class="math inline">\(i\)</span> 와 <span class="math inline">\(j\)</span> 는 각각 학교 <span class="math inline">\(j\)</span> 의 학생 <span class="math inline">\(i\)</span> 를 나타냄</p></li>
+<li><p>변수는 모델의 가독성을 높이기 위해 약어로 표기되었으며, 각 약어의 정의는 기술통계를 제시하는 표 1에 나와 있음</p></li>
+</ul></li>
+</ul></li>
+<li><p>ICT 사용이 학습 성과에 미치는 직접적인 효과를 추정한 후, 모든 측정유의값을 사용하여 간접 효과를 추정하기 위해 ICT 사용과 인지된 ICT 역량 간의 상호작용 조건을 포함함</p>
+<ul>
+<li><p>간접 효과는 학생의 ICT 역량에 따라 ICT 사용과 학습 성취도 간의 연관성이 달라지는 것으로 해석할 수 있음</p></li>
+<li><p>직접 효과를 추정할 때와 마찬가지로, 각 학습 영역에 대한 ICT 사용 형태별 영향을 개별적으로 추정함</p></li>
+<li><p>상호작용 항의 방향성을 파악하기 위해 하나의 측정유의값만 사용하여 상호작용 항으로 회귀를 다시 추정함</p></li>
+<li><p>또한 통계적으로 유의미한 상호작용 조건을 각각 시각화하여 제시함</p></li>
+<li><p>이러한 접근 방식을 통해 직접 효과와는 다른 해석이 가능한 유의미한 상호작용 항을 더 잘 이해하고 해석할 수 있음</p></li>
+<li><p>상호작용 항이 포함된 모델은 식 (2)에 명시되어 있음</p></li>
+<li><p><span id="eq-2"><span class="math display">\[
+y_{ij}=b_0+b_1age_{ij}+b_2gender_{ij}+b_3SES_{ij}+b_4attlearn_{jk}+b_5learntime_{jk}+b_6ICT+b_7ICTcomp_{ij}+b_8pubschl_{ij}+b_9ICTavail_{ij}+b_{10}educmat_{ij}+b_{11}discclim_{ij}+b_{12}classsize+b_{13}ICTuse*ICTcomp_{ij}+e_{ij}
+\tag{5.2}\]</span></span></p></li>
+</ul></li>
+<li><p>무조건 사분위수 회귀를 사용해 분석을 반복함</p>
+<ul>
+<li><p>UQR은 재중심화 영향 함수(RIF)를 기반으로 하며, <span class="math inline">\(\tau^{th}\)</span> 사분위수를 고려할 때 다음과 같이 작성됨</p></li>
+<li><p><span id="eq-3"><span class="math display">\[
+RIF(Y;q_{t;}F_Y)=q_t+\frac{\tau-1(Y\le q_\tau)}{f_Y(q_\tau)}
+\tag{5.3}\]</span></span></p>
+<ul>
+<li><p>여기서 <span class="math inline">\(q_\tau\)</span> 는 사분위수 <span class="math inline">\(\tau\)</span> 에서 종속변수 <span class="math inline">\(y\)</span> 의 값임</p></li>
+<li><p><span class="math inline">\(f_Y(q_\tau)\)</span> 는 사분위수 <span class="math inline">\(\tau\)</span> 에서 <span class="math inline">\(Y\)</span> 의 밀도함수임</p></li>
+<li><p><span class="math inline">\(1(Y \le q_\tau)\)</span> 는 지표 함수임</p>
+<ul>
+<li>이는 개인의 종속변수 <span class="math inline">\(Y\)</span> 값이 사분위수 <span class="math inline">\(\tau\)</span> 이하인지 여부를 식별함</li>
+</ul></li>
+</ul></li>
+<li><p>UQR은 <span class="math inline">\(X\)</span>가 주어졌을 때 <span class="math inline">\(RIF(Y; q_\tau)\)</span>의 조건부 기대치, 즉 <span class="math inline">\(E[RIF(Y;q_\tau; F_Y)| X]\)</span>에서의 무조건 사분위수 회귀로 지정됨</p></li>
+<li><p>ICT 사용이 학생의 학습 결과에 미치는 영향을 사분위수 τ에서 추정하는 모델은 다음과 같이 지정됨</p>
+<ul>
+<li><p><span id="eq-4"><span class="math display">\[
+E[RIF(Y_i;q_t;F_Y)|X_i]=X_i\beta_t+\epsilon_i
+\tag{5.4}\]</span></span></p>
+<ul>
+<li><p>여기서 <span class="math inline">\(X\)</span>는 방정식 (1)에 주어진 대로 학생 개인, 가정 및 학교 관련 특성을 포함하는 벡터를 나타냄</p></li>
+<li><p>이러한 예측 변수와 관련된 계수는 벡터 <span class="math inline">\(\beta\)</span>로 표시됨(여기에는 절편도 포함됨).</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>UQR은 결과 변수의 분포에 걸쳐 관심 변수(ICT 사용)와 결과 변수 간의 연관성을 제공함</p>
+<ul>
+<li><p>분석에서는 각 학습 영역에서 측정유의값 첫 번째 값만 종속 변수로 사용하며, 표준 오차는 학교 수준에서 군집화됨</p></li>
+<li><p>서로 다른 분포 수준에서의 연관성은 학생의 능력에 따라, 즉 저-중-고 성취도 학생에 따라 결과 변수가 얼마나 변화할 것으로 예상하는지로 해석할 수 있음</p></li>
+<li><p>이 접근 방식은 학생의 능력에 따라 ICT 사용과 학업 성취도 간의 연관성이 어떻게 달라질 수 있는지 보여주는 데 도움이 됨</p></li>
+<li><p>UQR 추정치에서 9개의 사분위수를 제시함</p></li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./literature.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Literature review</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./results.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Results</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
